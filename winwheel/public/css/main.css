@@ -121,7 +121,22 @@ body{
     float: left;
 }
 .right{
+    position: relative;
     float: right;
+}
+.information{
+    margin-right: 30px;
+    margin-top: 50px;
+    display: flex;
+    float: right;
+}
+.score{
+    border-top-right-radius: 0px!important;
+    border-bottom-right-radius: 0px!important;
+}
+.turn{
+    border-top-left-radius: 0px!important;
+    border-bottom-left-radius: 0px!important
 }
 .left p{
     text-align: justify;
@@ -141,4 +156,34 @@ span{
     padding: 3px;
     border-radius:5px;
 }
+.question{
+    padding-bottom: 10px;
+    text-align: center;
+    min-height: 100px;
+    background-color: rgb(239, 239, 239,0.3);
+}
+.text-box{
+    text-align: center;
+    min-height: 50px;
+    padding: 10px;
+}
+.text-input{
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+}
+
 /**/
+.box-alpha{
+    margin-left: 10%;
+    margin-top: 10px;
+    min-height: 100px;
+    padding-bottom: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: rgb(239, 239, 239,0.5);
+}
+.text1{
+    margin-bottom: 10px;  
+}

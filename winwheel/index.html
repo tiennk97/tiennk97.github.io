@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <script type="text/javascript" src="public/js/Winwheel.js"></script>
+    <script type="text/javascript" src="public/js/jquery.js"></script> 
     <script src="public/js/Tweenmax.js"></script>
     
 </head>
@@ -13,15 +14,40 @@
         <div class="left col-sm-4">
             <br>
             <br>
+            <div class="question">
+                <div class="title-box">
+                    <h1 class="btn btn-info" align="center">Question ?</h1>
+                </div>
+                <div class="text-box">
+                    <input type="text" class="text-input" name="tl">  
+                    <input type="text" class="text-input" name="tl">  
+                    <input type="text" class="text-input" name="tl">  
+                    <input type="text" class="text-input" name="tl">  
+                    <input type="text" class="text-input" name="tl">  
+                    <input type="text" class="text-input" name="tl">  
+                    <input type="text" class="text-input" name="tl">  
+                    <input type="text" class="text-input" name="tl">  
+                </div>
+                <button id="rep" class="btn btn-success">Trả lời ngay</button>
+            </div>
+            <br>
             <h1 class="btn btn-info" align="center">Luật chơi</h1>
             <div class="content">
-                <p >Chiếc nón kỳ diệu là một trò chơi truyền hình (game show) của kênh VTV3 - Đài Truyền hình Việt Nam phối hợp cùng Viet Ba Media thực hiện, được mua bản quyền dựa trên trò chơi Wheel of Fortune (Vòng quay may mắn)</p>
+                <p ><b>Chiếc nón kỳ diệu</b> là một trò chơi truyền hình (game show) của kênh VTV3 - <b>Đài Truyền hình Việt Nam</b> phối hợp cùng Viet Ba Media thực hiện, được mua bản quyền dựa trên trò chơi <b>Wheel of Fortune</b> (Vòng quay may mắn)</p>
                 <p>
                   Bắt đầu trò chơi bằng việc quay chiếc nón để có thể biết được bạn được bao nhiêu điểm nếu trả lời <span class=" btn-success";">đúng</span>, hoặc bạn sẽ được thêm lượt, hoặc bị mất lượt,… Trên màn hình chính sẽ có một số ô chữ gồm nhiều chữ cái chưa được mở, cùng với bảng chữ cái để bạn có thể lựa chọn để đoán trong mỗi lượt. Nếu bạn giải ra ô chữ thì điểm số cao sẽ thuộc về bạn, còn nếu quá một số lượt nhất định, bạn sẽ thua và phải <span class=" btn-info";">chơi lại</span> từ đầu.
               </p>
           </div>
       </div>
       <div class="right col-sm-8">
+        <div class="information col-sm-4">
+            <div class="score col-sm-6 btn btn-success">
+                <h4>999 điểm</h4>
+            </div>
+            <div class="turn col-sm-6 btn btn-danger">
+                <h4>2 lượt</h4>
+            </div>
+        </div>
         <table cellpadding="0" cellspacing="0" border="0">
             <tr>
                 <td>
@@ -29,7 +55,7 @@
                         <br />
                         <br />
                         <table class="power" cellpadding="10" cellspacing="0">
-                           <div class="slidecontainer">
+                         <div class="slidecontainer">
                             <input type="range" min="1" max="3" value="1" class="slider" id="myRange" onchange="powerSelected(this.value)">
                             <p>Giá trị lực: <span id="demo"></span></p>
                         </div>
@@ -60,8 +86,43 @@
                 </td>
             </tr>
         </table>
+        <div class="box-alpha col-sm-8">
+            <div class="text1">
+                <button class="btn btn-secondary" type="submit" value="A">A</button>
+                <button class="btn btn-secondary" type="submit" value="B">B</button>
+                <button class="btn btn-secondary" type="submit" value="C">C</button>
+                <button class="btn btn-secondary" type="submit" value="D">D</button>
+                <button class="btn btn-secondary" type="submit" value="E">E</button>
+                <button class="btn btn-secondary" type="submit" value="F">F</button>
+                <button class="btn btn-secondary" type="submit" value="G">G</button>
+                <button class="btn btn-secondary" type="submit" value="H">H</button>
+                <button class="btn btn-secondary" type="submit" value="I">I</button>
+                <button class="btn btn-secondary" type="submit" value="J">J</button>
+                <button class="btn btn-secondary" type="submit" value="K">K</button>
+                <button class="btn btn-secondary" type="submit" value="L">L</button>
+            </div>
+            <div class="text2">
+                <button class="btn btn-secondary" type="submit" value="M">M</button>
+                <button class="btn btn-secondary" type="submit" value="N">N</button>
+                <button class="btn btn-secondary" type="submit" value="O">O</button>
+                <button class="btn btn-secondary" type="submit" value="P">P</button>
+                <button class="btn btn-secondary" type="submit" value="Q">Q</button>
+                <button class="btn btn-secondary" type="submit" value="R">R</button>
+                <button class="btn btn-secondary" type="submit" value="S">S</button>
+                <button class="btn btn-secondary" type="submit" value="T">T</button>
+                <button class="btn btn-secondary" type="submit" value="U">U</button>
+                <button class="btn btn-secondary" type="submit" value="V">V</button>
+                <button class="btn btn-secondary" type="submit" value="W">W</button>
+                <button class="btn btn-secondary" type="submit" value="X">X</button>
+                <button class="btn btn-secondary" type="submit" value="Y">Y</button>
+                <button class="btn btn-secondary" type="submit" value="Z">Z</button>
+                
+            </div>
+        </div>
     </div>
+    <script type="text/javascript" src="public/js/main.js"></script>
     <script>
+
             // Create new wheel object specifying the parameters at creation time.
             var theWheel = new Winwheel({
                 'outerRadius'     : 212,        // Set outer radius so wheel fits inside the background.
@@ -131,7 +192,7 @@
 
                     // Light up the spin button by changing it's source image and adding a clickable class to it.
                     document.getElementById('spin_button').src = "spin_on.png";
-                    document.getElementById('spin_button').className = "clickable";
+                    document.getElementById('spin_button').className = "clickable btn btn-success";
                 }
             }
 
@@ -176,8 +237,8 @@
 
 
                     wheelSpinning = false;          // Reset to false to power buttons and spin can be clicked again.
+                }
             }
-        }
 
             // -------------------------------------------------------
             // Function for reset button.
